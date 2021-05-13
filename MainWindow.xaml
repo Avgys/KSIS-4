@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="ClientToServer" HorizontalAlignment="Left" Margin="42,38,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Height="141"/>
+        <TextBox x:Name="ServerToClient" HorizontalAlignment="Left" Margin="42,242,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Height="138"/>
+        <Button Content="SendCommand" HorizontalAlignment="Left" Margin="400,38,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox x:Name="FromEmail" HorizontalAlignment="Left" Margin="588,42,0,0" Text="beschertila@gmail.com" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
+        <TextBox x:Name="ToEmail" HorizontalAlignment="Left" Margin="588,77,0,0" Text="beschertila@gmail.com" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
+        <Button x:Name="Assign" Content="Assign" HorizontalAlignment="Left" Margin="532,40,0,0" VerticalAlignment="Top" Click="Assign_Click"/>
+        <TextBox x:Name="ClientInput" HorizontalAlignment="Left" Margin="588,128,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="252"/>
+        <Button x:Name="Send" Content="Send" HorizontalAlignment="Left" Margin="532,128,0,0" VerticalAlignment="Top" Click="Send_Click"/>
+
+    </Grid>
+</Window>

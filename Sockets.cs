@@ -8,9 +8,15 @@ using System.Net.Sockets;
 
 namespace MySockets
 {
-     class Net {
+     class MySocket{
 
         public Socket _Sock;
+
+        public MySocket(string Ip = "localhost", SocketType socketType = SocketType.Stream, ProtocolType protocolType = ProtocolType.Tcp)
+        {
+            IPAddress ipAddr = Dns.GetHostEntry(Ip).AddressList[0];
+            _Sock = new Socket(ipAddr.AddressFamily, socketType, protocolType);
+        }
 
         public Socket CreateSocket(string Ip = "localhost",  SocketType socketType = SocketType.Stream, ProtocolType protocolType = ProtocolType.Tcp)
         {            
@@ -21,6 +27,11 @@ namespace MySockets
         public int Send(byte[] msg)
         {
             return _Sock.Send(msg);
+        }
+
+        public int Send(string msg)
+        {
+            return _Sock.Send(Encoding.UTF8.GetBytes(msg));
         }
 
         public int Receive(byte[] bytes)
@@ -40,9 +51,9 @@ namespace MySockets
             Listen(4);
         }
 
-        public void Connect(string input = "localhost", int port = 513)
+        public void Connect(string input = "localhost", int port = 25)
         {
-            IPEndPoint ipEndPoint = new((Dns.GetHostEntry("localhost")).AddressList[0], port);
+            IPEndPoint ipEndPoint = new((Dns.GetHostEntry(input)).AddressList[0], port);
             _Sock.Connect(ipEndPoint);
         }
         
