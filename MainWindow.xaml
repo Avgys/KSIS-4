@@ -11,10 +11,11 @@
         <TextBox x:Name="ServerToClient" HorizontalAlignment="Left" Margin="42,242,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Height="138"/>
         <Button Content="SendCommand" HorizontalAlignment="Left" Margin="400,38,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <TextBox x:Name="FromEmail" HorizontalAlignment="Left" Margin="588,42,0,0" Text="beschertila@gmail.com" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
-        <TextBox x:Name="ToEmail" HorizontalAlignment="Left" Margin="588,77,0,0" Text="beschertila@gmail.com" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
+        <TextBox x:Name="ToEmail" HorizontalAlignment="Left" Margin="588,100,0,0" Text="beschertila@gmail.com" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
         <Button x:Name="Assign" Content="Assign" HorizontalAlignment="Left" Margin="532,40,0,0" VerticalAlignment="Top" Click="Assign_Click"/>
-        <TextBox x:Name="ClientInput" HorizontalAlignment="Left" Margin="588,128,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="252"/>
+        <TextBox x:Name="ClientInput" HorizontalAlignment="Left" Margin="588,128,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="252"/>
         <Button x:Name="Send" Content="Send" HorizontalAlignment="Left" Margin="532,128,0,0" VerticalAlignment="Top" Click="Send_Click"/>
+        <TextBox x:Name="clientPassword" HorizontalAlignment="Left" Margin="588,65,0,0" Text="igonas97epifot45" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="17"/>
 
     </Grid>
 </Window>

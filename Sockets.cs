@@ -14,7 +14,11 @@ namespace MySockets
 
         public MySocket(string Ip = "localhost", SocketType socketType = SocketType.Stream, ProtocolType protocolType = ProtocolType.Tcp)
         {
-            IPAddress ipAddr = Dns.GetHostEntry(Ip).AddressList[0];
+            IPAddress ipAddr = null;            
+            
+                if (!IPAddress.TryParse(Ip, out ipAddr))
+                    ipAddr = Dns.GetHostEntry(Ip).AddressList[0];
+            
             _Sock = new Socket(ipAddr.AddressFamily, socketType, protocolType);
         }
 
